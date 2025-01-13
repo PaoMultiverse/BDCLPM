@@ -1,0 +1,262 @@
+/* cart.css */
+
+/* Container Styles */
+.cart-container {
+    margin: 0 5%;
+    padding: 24px;
+    min-height: calc(100vh - 64px);
+  }
+  
+  /* Header Styles */
+  .cart-header {
+    margin-bottom: 24px;
+    padding: 16px 24px;
+    background: linear-gradient(to right, #a3c0dc, #9eaec0);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cart-header h2 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  /* Content Layout */
+  .cart-content {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .cart-content .cart-bill{
+    width: 30%;
+  }
+
+  .cart-bill {
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    max-height: 300px;
+}
+
+.billing-details {
+    margin-bottom: 16px;
+}
+
+.billing-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 10px;
+}
+
+.billing-label {
+    font-weight: bold;
+}
+
+.order-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10px ;
+}
+.order-button .ant-btn{
+  width: 90%;
+  height: 40px;
+}
+
+  .cart-content .ant-card {
+    width: 70%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+                0 1px 6px -1px rgba(0, 0, 0, 0.02),
+                0 2px 4px 0 rgba(0, 0, 0, 0.02);
+  }
+  
+  /* Table Styles */
+  .cart-content .ant-table-wrapper {
+    width: 100%;
+  }
+  
+  .cart-content .ant-table {
+    background: #ffffff;
+  }
+  
+  .cart-content .ant-table-thead > tr > th {
+    background: #f5f5f5;
+    font-weight: 600;
+    padding: 16px;
+  }
+  
+  .cart-content .ant-table-tbody > tr > td {
+    padding: 16px;
+  }
+  
+  /* Product Image Styles */
+  .product-image-container {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    padding: 4px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Quantity Control Styles */
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .quantity-control .ant-btn {
+    padding: 0 8px;
+    height: 32px;
+    min-width: 32px;
+  }
+  
+  .quantity-control .ant-input-number {
+    width: 60px;
+  }
+  
+  /* Price Display */
+  .price-display {
+    font-weight: 500;
+    color: #262626;
+  }
+  
+  .total-price-display {
+    font-weight: 600;
+    color: #1890ff;
+  }
+  
+  /* Actions Column */
+  .action-column {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+  
+  .action-column .ant-btn {
+    padding: 4px 8px;
+  }
+  
+  /* Empty Cart State */
+  .empty-cart {
+    text-align: center;
+    padding: 48px 0;
+    color: #8c8c8c;
+  }
+  
+  .empty-cart .anticon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #d9d9d9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cart-container {
+      padding: 16px;
+    }
+  
+    .cart-content {
+      flex-direction: column;
+    }
+  
+    .cart-header h2 {
+      font-size: 20px;
+    }
+  
+    .cart-content .ant-table {
+      font-size: 14px;
+    }
+  
+    .product-image-container {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  
+  /* Footer Summary Styles */
+  .cart-footer {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding: 16px 24px;
+    border-top: 1px solid #f0f0f0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+    margin-top: 24px;
+  }
+  
+  .cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-total {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  
+  .cart-total-label {
+    font-size: 16px;
+    color: #8c8c8c;
+  }
+  
+  .cart-total-amount {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1890ff;
+  }
+  
+  .checkout-button {
+    min-width: 150px;
+  }
+  
+  /* Quantity Input Styles */
+  .ant-input-number-handler-wrap {
+    display: none;
+  }
+  
+  .quantity-input {
+    width: 60px !important;
+    text-align: center;
+  }
+  
+  .quantity-button {
+    padding: 0 8px;
+    height: 32px;
+    min-width: 32px;
+  }
+  
+  /* Loading States */
+  .cart-loading {
+    padding: 48px 0;
+    text-align: center;
+  }
+  
+  /* Error States */
+  .cart-error {
+    padding: 24px;
+    text-align: center;
+    color: #ff4d4f;
+    background: #fff2f0;
+    border: 1px solid #ffccc7;
+    border-radius: 4px;
+    margin: 24px 0;
+  }
+

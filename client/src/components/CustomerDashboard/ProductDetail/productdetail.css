@@ -1,0 +1,318 @@
+.product-detail-container {
+    min-height: 100vh;
+    background: #fff;
+}
+
+.product-detail {
+    margin: 40px 10%;
+    display: flex;
+    gap: 15px;
+    padding: 32px 0;
+}.product-detail .list-img {
+    width: auto; /* Tự động điều chỉnh độ rộng */
+}
+
+.list-img .img-item {
+    display: flex;
+    flex-direction: column; /* Hiển thị theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các ảnh */
+    align-items: center;
+    padding: 10px;
+}
+
+.list-img .img-item img {
+    width: 70px;
+    height: 70px;
+    border: solid 0.5px #ccc;
+    border-radius: 8px;
+}
+.list-img .img-item {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.list-img .img-item.selected {
+    opacity: 1;
+    border: 1px solid #1677ff; /* Đường viền để focus */
+}
+
+.list-img .img-item:hover {
+    opacity: 1;
+}
+.product-detail .product-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 450px;
+    min-width: 300px;
+    padding: 50px;
+    position: relative;
+    border: solid 0.5px #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.product-detail .product-img img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-detail .product-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.product-detail .product-content .rate-container {
+    justify-content: flex-start;
+    align-items: center;;
+}
+.product-detail .product-content .rate-container .review{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #1677ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.product-detail .product-content .rate-container .custom-rate{
+    margin-bottom: 4px;
+}
+
+.product-detail .product-content .rate-container .anticon{
+    font-size: 18px;
+    align-content: center;
+}
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 25px ;
+}
+
+.product-info .product-name {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 1000;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin: 0;
+}
+.product-tag{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product-tag .tag-decrs{
+    font-size: 14px;
+    color: #1677ff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.product-tag .tag-decrs:hover{
+    text-decoration: underline;
+}
+.product-tag .tag-name{
+    padding: 5px 15px;
+    background: #27B006;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 30px;
+
+}
+.product-info .price-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.product-info .price-container .product-price {
+    font-size: 38px;
+    font-weight: 1000;
+    color: #000;
+    margin-bottom: 15px;
+}
+.product-info .price-container .sale-price{
+    font-size: 26px;
+    color: #999;
+    text-decoration: line-through;
+
+}
+
+.product-info .product-description {
+    font-family: 'Vollkorn', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a5568;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e2e8f0;
+    margin: 0;
+}
+
+.discount-percent{
+    font-weight: 800;
+    color: orange;
+}
+/* Quantity Control Styles */
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0;
+}
+
+.quantity .plus,
+.quantity .minus {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quantity .plus:hover,
+.quantity .minus:hover {
+    background: #f8f9fa;
+    border-color: #cbd5e0;
+}
+
+.quantity-number {
+    min-width: 60px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #fff;
+    color: #2d3748;
+}
+.quantity-section .warehouse{
+
+    color:#999 ;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.in-stock{
+    font-family: 'Nunito Sans', sans-serif;
+    color: #27B006;
+    font-weight: 800;
+}
+/* Action Buttons */
+.product-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.add-product-cart,
+.buy-now {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.btn-add-to-cart,
+.btn-buy-now {
+    width: 90%;
+    padding: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn-add-to-cart {
+    background: #e5780b;
+    color: #fff;
+    
+}
+
+.btn-buy-now {
+    color: #e5780b;
+    border: solid 1px #e5780b ;
+    background: #fff;
+}
+
+.add-product-cart:hover,
+.buy-now:hover {
+    transform: translateY(-2px);
+}
+
+.btn-add-to-cart:hover {
+    background: #e5780b;
+}
+
+.btn-buy-now:hover {
+    background: #e5780b;
+    color: #fff;
+}
+/* loading */
+.product-detail-container {
+    position: relative;
+}
+
+.product-detail-container .loading-overlay{
+    top: -100px;
+}
+
+.product-detail.blurred {
+    filter: blur(2px); /* Làm mờ nội dung khi đang loading */
+}
+
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .product-detail {
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .product-detail .product-img {
+        max-width: 100%;
+    }
+
+    .product-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-detail-container {
+        padding: 16px;
+    }
+
+    .product-info .product-name {
+        font-size: 24px;
+    }
+
+    .product-info .product-price {
+        font-size: 22px;
+    }
+
+    .product-actions {
+        gap: 12px;
+    }
+}

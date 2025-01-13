@@ -1,0 +1,293 @@
+.header-container-admin{
+
+}
+.header-container {
+    align-content: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: #f7f9fd;
+}
+.bottom-header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10%;
+}
+.category-dropdown {
+    cursor: pointer;
+}
+
+.category-dropdown  span{
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    padding: 0 5px;
+}
+.header-content {
+    margin: 0 8%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.logo img {
+    height: 55px;
+}
+.nav{
+    width: 50%;
+}
+
+.action-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 12%;
+}
+.cart , .bell, .avatar ,.logo, .btn-navigate-login{
+    cursor: pointer;
+}
+.btn-navigate-login{
+    padding: 10px 15px;
+    font-size: 13px;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    background: #3774ff;
+    color: #fff;
+}
+.btn-navigate-login:hover{
+    background: #1e60fb;
+
+}
+.navbar-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item a {
+    padding: 5px 0;
+    text-decoration: none;
+    color: #737272;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+
+}
+
+.nav-item a:hover {
+    color: #252525;
+}
+.login {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.user-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-info span {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.logout-button:hover {
+    color: #000000;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: solid 0.5px #000000;
+    border-radius: 20px;
+    background-color: #f5f3f3;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    background:none;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    width: 150px;
+    outline: none; /* Removes the default focus outline */
+
+}
+
+.search button {
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart{
+    color: #736f6f;
+}
+
+.fullscreen-modal .ant-modal {
+    width: 100% !important;
+    height: 100vh !important; /* Đặt chiều cao modal bằng với chiều cao màn hình */
+    max-width: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Container chính */
+.ant-popover-inner{
+    border-radius: 4px !important;
+    padding: 0 !important;
+    border: solid 1px #ccc;
+}
+.profile-container {
+    width: 290px;
+    background: #fff;
+    padding: 10px 0;
+    border-radius: 4px;
+  }
+  
+  /* Phần header chứa avatar và username */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 5px;
+  }
+  .profile-header .ant-avatar{
+    width: 45px;
+    height: 45px;
+  }
+  /* Style cho username */
+  .profile-header span {
+    font-weight: 1000;
+    font-size: 13px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .status-input{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Menu danh sách */
+  .profile-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Các item trong menu */
+  .profile-container li {
+    padding: 10px 12px;
+  }
+  .profile-container li span{
+        padding: 0 5px;
+        font-weight: 400;
+        color: #333;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  /* Hiệu ứng hover cho menu items */
+  .profile-container li:hover ,
+  .profile-footer .add-account:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  .profile-footer .add-container{
+    padding: 10px 0;
+    border-top:solid 0.5px #ccc ;
+    border-bottom:solid 0.5px #ccc ;
+  }
+  .profile-footer .add-account{
+    padding:0 12px;
+  }
+  .profile-footer .add-account span{
+    padding: 12px 5px;
+  }
+  .profile-footer .logout-container{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .btn-logut {
+    width: 75%;
+    padding: 17px 5px;
+    background-color: #F5F7FA; /* Màu nền mặc định */
+    border: solid 0.5px #ccc;
+    background: '#F5F7FA';
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search form {
+        width: 100%;
+    }
+
+    .search input[type="text"] {
+        width: 100%;
+    }
+}
