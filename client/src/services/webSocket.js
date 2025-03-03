@@ -12,14 +12,16 @@ const useSocket = () => {
   useEffect(() => {
     if (!token) return;
 
-    const socketInstance = io("http://localhost:3000", {
+    const socketInstance = io("https://bdclpm-server.vercel.app", {
       query: { token },
     });
-    
+
     // Lắng nghe sự kiện khi kết nối thành công
     socketInstance.on("connect", () => {
       console.log("Connected to WebSocket server:", socketInstance.id);
-      socketInstance.emit("clientConnected", { message: "Client has connected" });
+      socketInstance.emit("clientConnected", {
+        message: "Client has connected",
+      });
     });
 
     // Xử lý sự kiện ngắt kết nối
