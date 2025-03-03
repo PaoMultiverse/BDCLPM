@@ -1,10 +1,8 @@
-import axios from "axios"
+import axios from "axios";
 
-export const getBrand = async()=>{
-    try {
-        const res = await axios.get('/brand/');
-        return res.data
-    } catch (error) {
-        
-    }
-}
+export const getBrand = async () => {
+  try {
+    const res = await axios.get("https://bdclpm-server.vercel.app/brand/");
+    return res.data;
+  } catch (error) {}
+};
