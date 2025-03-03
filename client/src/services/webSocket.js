@@ -12,7 +12,7 @@ const useSocket = () => {
   useEffect(() => {
     if (!token) return;
 
-    const socketInstance = io("https://bdclpm-server.vercel.app", {
+    const socketInstance = io("https://bdclpm-server.vercel.app/", {
       query: { token },
     });
 
