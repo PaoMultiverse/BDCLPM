@@ -18,6 +18,7 @@ const HomePage = () => {
             try {
                 const productData = await getProducts();
                 const activeProducts = productData.filter(product => product.state === 'active'); // Lọc sản phẩm có trạng thái "active"
+                localStorage.setItem("products",activeProducts);
                 setProducts(activeProducts);
                 const categoriesData = await getCategories();
                 setCategories(categoriesData);

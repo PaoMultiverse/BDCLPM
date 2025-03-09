@@ -116,10 +116,10 @@ const Header = () => {
         // Xử lý đăng xuất
     };
     
-    const handleSearch = (e) => {
-        e.preventDefault();
-        console.log('Searching for:', searchQuery);
-        // Thêm xử lý tìm kiếm
+    const handleSearch = (value) => {
+        if (value.trim()) {
+            navigate(`/search?q=${encodeURIComponent(value)}`);
+        }
     };
     const categoryContent = (
         <div className="category-container" style={{ width: 350 }}>
@@ -279,7 +279,7 @@ const Header = () => {
                     <img src="/images/logo_shop.png" alt="logo" />
                 </div>
                 <div className="nav">
-                    <Input
+                    {/* <Input
                         prefix={<SearchOutlined style={{ color: '#8a94ad' }} />}
                         placeholder="Tìm kiếm"
                         size="middle"
@@ -287,6 +287,12 @@ const Header = () => {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onPressEnter={handleSearch}
+                    /> */}
+                    <Input.Search
+                        placeholder="Tìm kiếm sản phẩm..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onSearch={handleSearch}
                     />
                 </div>
                 {initialuser? ( 
