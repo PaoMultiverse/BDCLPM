@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getMessages = async (userId, otherUserId) => {
   try {
-    const res = await axios.get(`https://bdclpm-server.vercel.app/message`, {
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/message`, {
       params: {
         userId: userId,
         otherUserId: otherUserId,

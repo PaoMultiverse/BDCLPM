@@ -53,7 +53,7 @@ export const updateStatusOrder = async (orderId, orderStatus) => {
 export const getMyOrder = async (accessToken, axiosJWT) => {
   try {
     const res = await axiosJWT.get(
-      `https://bdclpm-server.vercel.app/order/me`,
+      `${process.env.REACT_APP_API_URL}/order/me`,
       {
         headers: { token: `Bearer ${accessToken}` },
       }

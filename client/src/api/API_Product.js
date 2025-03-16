@@ -10,7 +10,7 @@ import { getProductByCategorySuccess } from "../redux/slice/category";
 
 export const createProduct = async (dispacth, data) => {
   try {
-    await axios.post(`https://bdclpm-server.vercel.app/prod/create`, data);
+    await axios.post(`${process.env.REACT_APP_API_URL}/prod/create`, data);
     dispacth(createProductSuccess());
     return { success: true }; // Thêm dòng này để trả về kết quả thành công
   } catch (error) {
@@ -21,7 +21,7 @@ export const createProduct = async (dispacth, data) => {
 
 export const getProducts = async () => {
   try {
-    const res = await axios.get(`https://bdclpm-server.vercel.app/prod/get`);
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/prod/get`);
     return res.data;
   } catch (error) {
     console.log(error);
@@ -31,7 +31,7 @@ export const getProducts = async () => {
 export const getProductByCategory = async (dispacth, categoryId) => {
   try {
     const res = await axios.get(
-      `https://bdclpm-server.vercel.app/prod/${categoryId}`
+      `${process.env.REACT_APP_API_URL}/prod/${categoryId}`
     );
     dispacth(getProductByCategorySuccess(res.data));
   } catch (error) {}
@@ -40,7 +40,7 @@ export const getProductByCategory = async (dispacth, categoryId) => {
 export const deleteProduct = async (dispacth, productId) => {
   try {
     const res = await axios.post(
-      `https://bdclpm-server.vercel.app/prod/${productId}`
+      `${process.env.REACT_APP_API_URL}/prod/${productId}`
     );
     dispacth(deleteProductSuccess(res.data));
     return { success: true };
@@ -52,7 +52,7 @@ export const deleteProduct = async (dispacth, productId) => {
 export const removeProduct = async (dispacth, productId) => {
   try {
     const res = await axios.delete(
-      `https://bdclpm-server.vercel.app/remove/${productId}`
+      `${process.env.REACT_APP_API_URL}/remove/${productId}`
     );
     dispacth(deleteProductSuccess(res.data));
     return { success: true };
@@ -64,7 +64,7 @@ export const removeProduct = async (dispacth, productId) => {
 export const getProductDetail = async (dispacth, productId) => {
   try {
     const res = await axios.get(
-      `https://bdclpm-server.vercel.app/prod-detail/${productId}`
+      `${process.env.REACT_APP_API_URL}/prod-detail/${productId}`
     );
     dispacth(getproductDetailSuccess(res.data));
     return res.data;
@@ -76,7 +76,7 @@ export const getProductDetail = async (dispacth, productId) => {
 export const addProdToCart = async (accessToken, data, axiosJWT) => {
   try {
     const res = await axiosJWT.post(
-      `https://bdclpm-server.vercel.app/shopping/add`,
+      `${process.env.REACT_APP_API_URL}/shopping/add`,
       data,
       {
         headers: { token: `Bearer ${accessToken}` },
@@ -90,7 +90,7 @@ export const addProdToCart = async (accessToken, data, axiosJWT) => {
 
 export const getTags = async () => {
   try {
-    const res = await axios.get(`https://bdclpm-server.vercel.app/tag/`);
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/tag/`);
     return res.data;
   } catch (error) {
     return error;
@@ -99,7 +99,7 @@ export const getTags = async () => {
 
 export const getVariants = async () => {
   try {
-    const res = await axios.get(`https://bdclpm-server.vercel.app/variant`);
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/variant`);
 
     return res.data;
   } catch (error) {

@@ -6,7 +6,7 @@ import {
 
 export const createCategory = async (dispacth, data) => {
   try {
-    await axios.post(`https://bdclpm-server.vercel.app/cat/create`, data);
+    await axios.post(`${process.env.REACT_APP_API_URL}/cat/create`, data);
     dispacth(createCategorySuccess());
     return { success: true }; // Thêm dòng này để trả về kết quả thành công
   } catch (error) {
@@ -17,7 +17,7 @@ export const createCategory = async (dispacth, data) => {
 
 export const getCategories = async () => {
   try {
-    const res = await axios.get(`https://bdclpm-server.vercel.app/cat/get`);
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/cat/get`);
     return res.data;
     // dispacth(getCategoriesSuccess(res.data));
   } catch (error) {
@@ -28,7 +28,7 @@ export const getCategories = async () => {
 export const deleteCategory = async (id) => {
   try {
     const res = await axios.delete(
-      `https://bdclpm-server.vercel.app/cat/${id}`
+      `${process.env.REACT_APP_API_URL}/cat/${id}`
     );
     return res.data;
   } catch (error) {

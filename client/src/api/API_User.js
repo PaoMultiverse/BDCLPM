@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getShippingAddress = async (accessToken) => {
   try {
-    const res = await axios.get(`https://bdclpm-server.vercel.app/address/`, {
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/address/`, {
       headers: { token: `Bearer ${accessToken}` },
     });
     return res.data;
@@ -14,7 +14,7 @@ export const getShippingAddress = async (accessToken) => {
 export const addShippingAddress = async (accessToken) => {
   try {
     const res = await axios.post(
-      `https://bdclpm-server.vercel.app/customer/address/add`,
+      `${process.env.REACT_APP_API_URL}/customer/address/add`,
       {
         headers: { token: `Bearer ${accessToken}` },
       }
@@ -28,7 +28,7 @@ export const addShippingAddress = async (accessToken) => {
 export const getCustomers = async (accessToken, axiosJWT) => {
   try {
     const res = await axiosJWT.get(
-      `https://bdclpm-server.vercel.app/customer/`,
+      `${process.env.REACT_APP_API_URL}/customer/`,
       {
         headers: { token: `Bearer ${accessToken}` },
       }
@@ -42,7 +42,7 @@ export const getCustomers = async (accessToken, axiosJWT) => {
 export const getProfileUser = async (accessToken, axiosJWT) => {
   try {
     const res = await axiosJWT.get(
-      `https://bdclpm-server.vercel.app/customer/profile`,
+      `${process.env.REACT_APP_API_URL}/customer/profile`,
       {
         headers: { token: `Bearer ${accessToken}` },
       }
@@ -56,7 +56,7 @@ export const getProfileUser = async (accessToken, axiosJWT) => {
 export const addAddress = async (accessToken, axiosJWT, data) => {
   try {
     const res = await axiosJWT.post(
-      `https://bdclpm-server.vercel.app/customer/address/add`,
+      `${process.env.REACT_APP_API_URL}/customer/address/add`,
       data,
       {
         headers: { token: `Bearer ${accessToken}` },
@@ -71,7 +71,7 @@ export const addAddress = async (accessToken, axiosJWT, data) => {
 export const updateAddressDefault = async (addressId) => {
   try {
     const res = await axios.get(
-      `https://bdclpm-server.vercel.app/customer/update-adress/` + addressId
+      `${process.env.REACT_APP_API_URL}/customer/update-adress/` + addressId
     );
     return res.data;
   } catch (error) {
