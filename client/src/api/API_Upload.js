@@ -9,7 +9,7 @@ export const uploadImages = async (file) => {
   try {
     // Gửi request đến API upload
     const response = await axios.post(
-      `${process.env.REACT_APP_API_URL}/upload/images`,
+      "https://bdclpm-server.vercel.app/upload/images",
       formData,
       {
         headers: {

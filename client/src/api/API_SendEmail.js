@@ -27,7 +27,7 @@ export const resetPassword = async (email) => {
 export const returnPassword = async (token) => {
   try {
     const res = await axios.get(
-      `${process.env.REACT_APP_API_URL}/send/return-newpass?token=${token}`
+      `https://bdclpm-server.vercel.app/send/return-newpass?token=${token}`
     );
 
     return res.data;

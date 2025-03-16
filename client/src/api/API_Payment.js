@@ -16,7 +16,7 @@ export const createPaymentUrl = async (orderId) => {
 export const vnpayReturn = async (vnpParams) => {
   try {
     const res = await axios.get(
-      `${process.env.REACT_APP_API_URL}/vnpay_return${vnpParams}`
+      `https://bdclpm-server.vercel.app/vnpay_return${vnpParams}`
     );
     return res.data;
   } catch (error) {

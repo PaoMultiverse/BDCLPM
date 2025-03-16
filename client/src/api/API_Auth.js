@@ -9,7 +9,7 @@ import {
 export const loginUser = async (dispatch, loginData) => {
   try {
     const res = await axios.post(
-      `${process.env.REACT_APP_API_URL}/auth/login`,
+      `https://bdclpm-server.vercel.app/auth/login`,
       loginData
     );
     dispatch(loginSuccess(res.data));
@@ -22,7 +22,7 @@ export const loginUser = async (dispatch, loginData) => {
 export const sendOTP = async (dispatch, email) => {
   try {
     const res = await axios.post(
-      `${process.env.REACT_APP_API_URL}/otp/send-otp`,
+      `https://bdclpm-server.vercel.app/otp/send-otp`,
       { email: email }
     );
     dispatch(sendOtpSuccess(res.data));
@@ -35,7 +35,7 @@ export const sendOTP = async (dispatch, email) => {
 export const registerAccount = async (dispatch, navigate, regData) => {
   try {
     const res = await axios.post(
-      `${process.env.REACT_APP_API_URL}/auth/reg`,
+      `https://bdclpm-server.vercel.app/auth/reg`,
       regData
     );
     dispatch(registerSuccess(res.data));
@@ -49,7 +49,7 @@ export const registerAccount = async (dispatch, navigate, regData) => {
 export const logoutUser = async (dispatch, accessToken, axiosJWT) => {
   try {
     const res = await axiosJWT.post(
-      `${process.env.REACT_APP_API_URL}/auth/logout`,
+      `https://bdclpm-server.vercel.app/auth/logout`,
       {
         headers: { token: `Bearer ${accessToken}` },
       }

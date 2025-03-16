@@ -4,7 +4,7 @@ import { getCartSucsess } from "../redux/slice/cart";
 export const getCart = async (accessToken, dispatch, axiosJWT) => {
   try {
     const res = await axiosJWT.get(
-      `${process.env.REACT_APP_API_URL}/shopping/`,
+      `https://bdclpm-server.vercel.app/shopping/`,
       {
         headers: { token: `Bearer ${accessToken}` },
       }
@@ -20,7 +20,7 @@ export const getCart = async (accessToken, dispatch, axiosJWT) => {
 export const removeCartItem = async (accessToken, itemId, axiosJWT) => {
   try {
     const res = await axiosJWT.delete(
-      `${process.env.REACT_APP_API_URL}/shopping/${itemId}`,
+      `https://bdclpm-server.vercel.app/shopping/${itemId}`,
       {
         headers: { token: `Bearer ${accessToken}` },
       }
